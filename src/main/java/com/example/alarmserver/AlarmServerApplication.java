@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AlarmServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlarmServerApplication.class, args);
-        System.out.println("hi home");
+        System.out.println("Server Started");
     }
-
 }

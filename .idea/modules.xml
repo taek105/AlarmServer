@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PushServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PushServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlarmServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AlarmServer.main.iml" />
     </modules>
   </component>
 </project>
