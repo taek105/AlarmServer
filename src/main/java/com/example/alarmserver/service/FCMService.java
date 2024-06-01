@@ -32,7 +32,6 @@ public class FCMService {
             request.setContent("자동 입찰이 끝났어요.");
 
 
-
         pushToToken(token, request.getContent(), request.getProductName());
     }
 

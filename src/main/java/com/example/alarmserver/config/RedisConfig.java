@@ -35,24 +35,4 @@ public class RedisConfig {
         template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
         return template;
     }
-
-//    @Bean
-//    public RedisMessageListenerContainer redisMessageListenerContainer(RedisConnectionFactory redisConnectionFactory,
-//                                                                       MessageListenerAdapter listenerAdapter,
-//                                                                       ChannelTopic channelTopic) {
-//        RedisMessageListenerContainer container = new RedisMessageListenerContainer();
-//        container.setConnectionFactory(redisConnectionFactory);
-//        container.addMessageListener(listenerAdapter, channelTopic);
-//        return container;
-//    }
-
-//    @Bean
-//    public MessageListenerAdapter listenerAdapter(RedisSubscriber subscriber) {
-//        return new MessageListenerAdapter(subscriber, "onMessage");
-//    }
-
-//    @Bean
-//    public ChannelTopic channelTopic() {
-//        return new ChannelTopic("bidmarKitChatRoom");
-//    }
 }

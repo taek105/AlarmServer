@@ -6,16 +6,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Duration;
+
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/redis")
 public class RedisController {
 
     private final RedisService redisService;
 
     @PostMapping("/postFCMToken")
     public  ResponseEntity<Void> addFCMToken(@RequestBody AddFCMTokenRequest request) {
-        redisService.setValues(request.getMemberId(), request.getFCMToken());
+        redisService.setValues(request.getMemberId(), request.getFCMToken(), Duration.ofSeconds(30));
         return ResponseEntity.ok().build();
     }
 
