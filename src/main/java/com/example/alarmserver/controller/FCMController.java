@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/FCM")
+@RequestMapping("/fcm")
 public class FCMController {
     private final FCMService fcmService;
 
@@ -18,4 +18,5 @@ public class FCMController {
 
         return ResponseEntity.ok().build();
     }
+
 }
