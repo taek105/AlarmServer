@@ -19,13 +19,13 @@ public class FCMService {
         String token = (String) redisTemplate.opsForValue().get(memberId);
 
         if ( request.getType() == 1 )
-            pushToToken(token, "새로운 QnA 문의글이 있어요.", request.getProductName());
+            request.setContent("새로운 QnA 문의글이 있어요.");
         else if ( request.getType() == 2 )
-            pushToToken(token, "새로운 QnA 답변글이 있어요.", request.getProductName());
+            request.setContent("새로운 QnA 답변글이 있어요.");
         else if ( request.getType() == 3 )
-            pushToToken(token, "상위 입찰이 있어요.", request.getProductName());
-        else if ( request.getType() == 4 )
-            pushToToken(token, request.getContent(), request.getProductName());
+            request.setContent("상위 입찰이 있어요.");
+
+        pushToToken(token, request.getContent(), request.getProductName());
     }
 
     public void pushToToken(String token, String content, String productName) {

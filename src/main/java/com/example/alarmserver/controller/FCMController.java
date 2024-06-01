@@ -18,11 +18,4 @@ public class FCMController {
 
         return ResponseEntity.ok().build();
     }
-
-//    @PostMapping("/push/{memberId}")
-//    public ResponseEntity<Void> sendPushAlarm (@PathVariable String memberId, @RequestBody PushChatAlarmRequest request) {
-//        fcmService.send(memberId, request);
-//
-//        return ResponseEntity.ok().build();
-//    }
 }
