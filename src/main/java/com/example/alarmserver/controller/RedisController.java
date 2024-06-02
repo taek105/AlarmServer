@@ -16,7 +16,7 @@ public class RedisController {
 
     @PostMapping("/postFCMToken")
     public  ResponseEntity<Void> addFCMToken(@RequestBody AddFCMTokenRequest request) {
-        redisService.setValues(request.getMemberId(), request.getFCMToken(), Duration.ofSeconds(30));
+        redisService.setValues(request.getMemberId(), request.getFCMToken(), Duration.ofHours(3));
         return ResponseEntity.ok().build();
     }
 

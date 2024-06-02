@@ -31,14 +31,18 @@ public class FCMService {
         else if ( request.getType() == 4 )
             request.setContent("자동 입찰이 끝났어요.");
 
-
-        pushToToken(token, request.getContent(), request.getProductName());
+//        System.out.println(token);
+//        System.out.println(request.getContent());
+//        System.out.println(request.getImgURL());
+//        System.out.println(request.getProductName());
+        pushToToken(token, request.getContent(), request.getImgURL(), request.getProductName());
     }
 
-    public void pushToToken(String token, String content, String productName) {
+    public void pushToToken(String token, String content, String imgURL, String productName) {
         Message message = Message.builder()
                 .putData("title", "BidmarKit")
                 .putData("content", content)
+                .putData("imgurl", imgURL)
                 .putData("productName", productName)
                 .setToken(token)
                 .build();
