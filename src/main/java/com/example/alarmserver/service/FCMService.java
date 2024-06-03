@@ -31,9 +31,10 @@ public class FCMService {
         else if ( request.getType() == 4 )
             request.setContent("자동 입찰이 끝났어요.");
 
+
 //        System.out.println(token);
 //        System.out.println(request.getContent());
-//        System.out.println(request.getImgURL());
+//        System.out.println(reques.getImgURL());
 //        System.out.println(request.getProductName());
         pushToToken(token, request.getContent(), request.getImgURL(), request.getProductName());
     }
